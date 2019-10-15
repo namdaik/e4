@@ -34,17 +34,10 @@
 			$subcategory = parent::__construct();
 
 			$id = (int)$id;
-
 			//Gọi post
 			$row = parent::get_by_id($id);
 			//Gọi commnet
 			$list_comment = parent::get_list_comment($id);
-
-
-		
-			
-
-
 			//Thêm comment
 			if( isset($_POST['content']) ){
 
@@ -60,7 +53,6 @@
 						'content'  => $_POST['content'],
 						'created_at' => date('Y-m-d',time())
 					);
-					
 
 					$result_comment = parent::post_comment($comment);
 
@@ -71,18 +63,12 @@
 						echo 'loi';
 					}
 
-					
-
 				}
 				
 			}
 			else{
 				require('containers/site/views/product/view.php');
 			}
-
-			
-
-
 
 		}
 

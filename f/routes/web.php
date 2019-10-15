@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('urlsitemap', 'url.urlsitemap')->name('url_sitemap');
+Route::post('urlsitemap', 'UrlController@storeUrlSitemap')->name('store_url_sitemap');
